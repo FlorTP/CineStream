@@ -1,0 +1,212 @@
+.module .content .items {
+  width: 100%;
+  float: left;
+  margin-bottom: 25px;
+  border-bottom: solid 1px;
+}
+.module .content.full_width_layout .items .item {
+  width: calc(100%/ 6);
+}
+.module .content .items .item {
+  width: calc(100%/ 5);
+  float: left;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  float: left;
+  right: 0;
+  padding: 60px 0 0 0;
+  /* margin: 150px 0 0 0; */
+  position: fixed;
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%);
+  background-color: #14213D;
+}
+.main .hbox {
+  max-width: 80%;
+  height: 70px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #14213D;
+}
+
+ .items {
+  border-color: rgba(255,255,255,.08);
+}
+
+ .items {
+  width: 100%;
+  float: left;
+  margin-bottom: 25px;
+  border-bottom: solid 1px;
+}
+/*  */
+/*  */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 0 0 calc(33.33% - 20px);
+  height: 460px;
+  background-color: #e5e5e5;
+  margin: 10px;
+  z-index: -10;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+.card-title{
+  margin: 10px 20px;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 22px;
+  font-style: normal;
+}
+.card-description{
+  margin: 10px 20px;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  text-align: justify;
+}
+.card-genre{
+  margin: 10px 20px;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #FCA311;
+  color: #fff;
+  font-style: italic;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.span_img_genre{
+  width: 19px;
+  height: 19px;
+  margin: 5px 5px 0 0;
+}
+.span_label_genre{
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  color:black;
+}
+
+.title_Genre {
+  margin: 20px 0 0 0;
+  color: #ffff;
+  border-left: 4px solid #FCA311;
+  padding: 5px 0 0 10px;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 27px;
+  color: #fff;
+  font-weight: 700;
+  font-family: Poppins,sans-serif;
+  padding-bottom: 8px;
+}
+.card-img{
+  width: 100%;
+  height : 250px;
+  border-radius: 10px 10px 0px 0px;
+}
+/*  */
+.movie-card {
+  position: relative;
+  width: 300px;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-card:hover .overlay {
+  opacity: 1;
+}
+.card-img2{
+  width: 100%;
+  height : 350px;
+  margin: 50px 0px 0px 0px;
+  transition: transform 0.3s;
+  /* border-radius: 10px 10px 0px 0px; */
+}
+
+.card-img2:hover {
+  transform: scale(1.1); /* Puedes ajustar el valor según la cantidad de zoom que desees */
+  cursor: pointer; /* Opcional: Cambia el cursor al pasar sobre la imagen */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 10px; */
+}
+
+.box {
+  display: inline-block;
+  width: 30%;
+  margin: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.card2 {
+  /* flex: 0 0 calc(33.33% - 20px); */
+  width: 400px;
+  height: 260px;
+  top:0;
+  background-color: #e5e5e5;
+  padding: 30px 10px 10px 10px;
+  margin: 50px 0px 0px 50px;
+  border-radius: 10px;
+}
+.card-description2{
+  margin: 10px 20px;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  text-align: justify;
+}
+.card-genre2{
+  margin: 50px 20px;
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+  text-align: justify;
+  font-size: 16px;
+}

@@ -1,0 +1,88 @@
+<div class="main">
+  <div class="hbox">
+    <div *ngIf="isGenres">
+      <div>
+        <h1 class="title_Genre">{{optionFilter}}</h1>
+      </div>
+      <div class="flex-container">
+        <div class="card" *ngFor="let item of listMovies">
+          <div>
+            <img class="card-img" src="assets/img/{{item.title}}.jpg" alt="img movie" />
+          </div>
+          <div class="card-title">{{item.title}}</div>
+          <div class="card-description">{{item.description}}</div>
+          <div class="card-genre"> Genre:
+            <span class="badge">
+              <img class="span_img_genre" src="assets/img/{{item.genre}}.png" alt="img genre" />
+              <label class="span_label_genre">{{item.genre}}</label>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="isMovie">
+      <div>
+        <h1 class="title_Genre">{{optionFilterMovie}}</h1>
+      </div>
+      <!--  <div class="flex-container">
+        <div class="card" *ngFor="let item of listMovies">
+
+          <div>
+            <img class="card-img" src="assets/img/{{item.title}}.jpg" alt="logo Genero" />
+          </div>
+          <div class="card-title"> {{item.title}}</div>
+          <div class="card-description">{{item.description}}</div>
+          <div class="card-genre"> Genre:
+            <span class="badge">
+              <img class="span_img_genre" src="assets/img/{{item.genre}}.png" alt="logo Genero" />
+              <label class="span_label_genre">{{item.genre}}</label>
+            </span>
+          </div>
+        </div>
+      </div>-->
+      <div *ngFor="let item of listMovies">
+        <table style="width:90%">
+          <tr>
+            <td style="width:30%">
+              <img class="card-img2" src="assets/img/{{item.title}}.jpg" alt="img movie" />
+            </td>
+            <td>
+              <div class="card2" *ngFor="let item of listMovies">
+
+                <div class="card-description2">{{item.description}}</div>
+                <div class="card-genre2"> Genre:
+                  <span class="badge">
+                    <img class="span_img_genre" src="assets/img/{{item.genre}}.png" alt="logo Genero" />
+                    <label class="span_label_genre">{{item.genre}}</label>
+                  </span>
+                </div>
+              </div>
+
+            </td>
+
+          </tr>
+        </table>
+      </div>
+      <!-- <div class="movie-card"> -->
+
+      <!-- <div *ngFor="let item of listMovies">
+          <div>
+            <h1 class="title_Genre">{{optionFilterMovie}}</h1>
+          </div>
+          <div class="movie-container">
+            <img class="card-img2" src="assets/img/{{item.title}}.jpg" alt="img movie" />
+            <div class="card" *ngFor="let item of listMovies">
+
+              <div class="card-description">{{item.description}}</div>
+              <div class="card-genre"> Genre:
+                <span class="badge">
+                  <img class="span_img_genre" src="assets/img/{{item.genre}}.png" alt="logo Genero" />
+                  <label class="span_label_genre">{{item.genre}}</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    </div>
+  </div>
+</div>

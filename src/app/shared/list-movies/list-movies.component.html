@@ -1,0 +1,25 @@
+
+<div class="main">
+  <div class="hbox">
+    <div class="flex-container">
+      <!-- <div class="card" *ngFor="let item of listMovies">
+        <div class="card-title">{{item.title}}</div>
+        <div class="card-description">{{item.description}}</div>
+        <div class="card-genre"> Genre:
+          <span class="badge">
+            <img class="span_img_genre" src="assets/img/{{item.genre}}.png" alt="logo Genero"/>
+            <label class="span_label_genre">{{item.genre}}</label>
+          </span>
+        </div>
+      </div> -->
+      <div class="movie-card" *ngFor="let item of listMovies" (click)="goToMovie(item.title)">
+          <img class="movie-card-img" src="assets/img/{{item.title}}.jpg" alt="Nombre de la película">
+          <div class="overlay">
+            <label class="card-title">{{item.title}}</label>
+            <label class="card-description">{{item.description}}</label>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<app-preloader [loading]="isLoading"></app-preloader>
+<app-header *ngIf="!isLoading" ></app-header>
+
+<div *ngIf="!isLoading" class="main">
+  <div class="hbox">
+    <label class="home_title">
+      PELICULAS AGREGADAS RECIENTEMENTE
+    </label>
+  </div>
+</div>
+
+<app-list-movies *ngIf="!isLoading"></app-list-movies>

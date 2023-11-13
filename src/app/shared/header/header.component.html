@@ -1,0 +1,83 @@
+<!-- Toolbar -->
+<!-- <div class="toolbar" role="banner">
+  <div class="container">
+
+    <a href="" class="a_logo">
+      <img src="assets/img/movie_logo.svg" width="40" alt="Movie Logo" />
+      <h1>CineStream</h1>
+    </a>
+
+    <div class="spacer"></div>
+    <ul class="nav-list">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Géneros</a></li>
+
+    </ul>
+  </div>
+</div> -->
+<header class="main">
+  <div class="hbox">
+    <div class="logo">
+      <a href="" class="a_logo">
+        <img src="assets/img/boleto.png" width="40" alt="Movie Logo" />
+        <!-- <label class="a_label_titulo">CineStream</label> -->
+        <h1 class="logo_title">CineStream</h1>
+      </a>
+    </div>
+    <div class="head-main-nav">
+      <ul class="main-header">
+        <li>
+          <a href="">
+            <h3 class="main-header-gender-title">Inicio</h3>
+          </a>
+        </li>
+        <li class="genre-item">
+          <a>
+            <div>
+              <h3 class="main-header-gender-title">Géneros</h3>
+              <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff" width="19" class="genre-icon">
+                <path
+                  d="M28.16 94.34C37.06 103.14 108.26 173.54 117.16 182.34C121.16 186.34 127.16 186.34 132.16 182.34C140.96 173.54 211.36 103.14 220.16 94.34C225.4 89.1 225.4 80.59 220.16 75.34C214.91 70.1 206.4 70.1 201.16 75.34C201.16 75.34 201.16 75.34 201.16 75.34C196.02 80.48 170.36 106.14 124.16 152.34C77.96 106.14 52.29 80.48 47.16 75.34C42.16 69.34 33.16 69.34 28.16 75.34C23.16 80.34 23.16 88.34 28.16 94.34Z">
+                </path>
+              </svg>
+            </div>
+          </a>
+          <ul class="sub-menu">
+            <li *ngFor="let item of subMenuItems">
+              <a (click)="goToGenre(item)">
+                <h3>{{ item }}</h3>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="headitems ">
+      <div class="search">
+        <form autocomplete="off" [formGroup]="formBuscar" #f="ngForm">
+          <input type="text" placeholder="Buscar..." autocomplete="off" formControlName="filter"
+            (ngModelChange)="filterGenre($event)">
+          <button class="search-button" type="submit">
+
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50">
+              <path
+                d="M 21 4 C 11.082241 4 3 12.082241 3 22 C 3 31.917759 11.082241 40 21 40 C 24.62177 40 27.99231 38.91393 30.820312 37.0625 L 43.378906 49.621094 L 47.621094 45.378906 L 35.224609 32.982422 C 37.581469 29.938384 39 26.13473 39 22 C 39 12.082241 30.917759 4 21 4 z M 21 8 C 28.756241 8 35 14.243759 35 22 C 35 29.756241 28.756241 36 21 36 C 13.243759 36 7 29.756241 7 22 C 7 14.243759 13.243759 8 21 8 z">
+              </path>
+            </svg>
+
+          </button>
+        </form>
+      </div>
+    </div>
+    <div *ngIf="isFound" class="live-search ltr">
+      <ul *ngFor="let item of AListSearch">
+        <li (click)="goToGenre(item.title)" class="li_select_option">
+          <div class="ul_li_title">{{item.title}}</div>
+          <div class="ul_li_description">{{item.description}}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
